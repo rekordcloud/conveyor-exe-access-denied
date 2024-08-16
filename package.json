@@ -1,0 +1,24 @@
+{
+  "name": "exe-problem-repro",
+  "version": "1.0",
+  "description": "An example app showing how to combine Electron apps with Conveyor",
+  "main": "main.js",
+  "updateSite": "http://localhost:3000",
+  "scripts": {
+    "start": "cross-env NODE_ENV=development electron .",
+    "make": "conveyor make site --overwrite",
+    "make:msix": "conveyor make windows-msix --overwrite",
+    "make:zip": "conveyor make windows-zip --overwrite",
+    "app-id": "conveyor make app-user-model-id"
+  },
+  "author": "Hydraulic Software",
+  "license": "Apache 2.0",
+  "dependencies": {
+    "@hydraulic/conveyor-control": "^1.0.0",
+    "cross-env": "^7.0.3",
+    "koffi": "^2.8.11"
+  },
+  "devDependencies": {
+    "electron": "^30.0.0"
+  }
+}
